@@ -4,17 +4,36 @@
 .inv-t i{display:block;height:100%;border-radius:980px;background:var(--graf)} .inv-t i.hi{background:var(--accent)}
 .inv-p{text-align:right;color:var(--ink-2);font-variant-numeric:tabular-nums;font-size:.9rem}
 .inv-list{list-style:none;padding:0;margin:32px 0 0;max-width:760px}
-.des-l{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
-.des-l li{background:var(--surface);border-radius:20px;padding:20px 20px 18px;display:flex;flex-direction:column}
-.des-m{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink)}
-.des-l b{font-size:2rem;font-weight:500;letter-spacing:-.03em;line-height:1.1;margin-top:10px;font-variant-numeric:tabular-nums}
-.des-v{font-weight:500;font-variant-numeric:tabular-nums;margin-top:2px}
-.des-t{color:var(--ink-2);font-size:.86rem;margin:6px 0 16px;flex:1}
-.des-a{display:block;height:6px;border-radius:980px;background:var(--surface-2);overflow:hidden}
-.des-a i{display:block;height:100%;background:var(--accent);border-radius:980px}
-.des-c{font-size:.78rem;color:var(--ink-2);margin-top:6px;font-variant-numeric:tabular-nums}
-@media (max-width:900px){.des-l{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:480px){.des-l{grid-template-columns:1fr}}
+/* sugestão de desembolso */
+.dz-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px}
+.dz-meta div{background:var(--surface);border-radius:var(--r-md);padding:16px 20px}
+.dz-meta div.hl{background:var(--accent-soft)}
+.dz-meta span{display:block;font-size:.86rem;color:var(--ink-2)}
+.dz-meta div.hl span{color:var(--accent-ink)}
+.dz-meta b{display:block;font-weight:600;margin-top:4px;font-variant-numeric:tabular-nums}
+.dz-meta div.hl b{color:var(--accent-ink)}
+.dz-tw{overflow-x:auto;margin-top:14px;border-radius:var(--r-md);border:1px solid var(--line)}
+.dz-t{width:100%;min-width:640px;border-collapse:collapse;font-size:.92rem;font-variant-numeric:tabular-nums}
+.dz-t th,.dz-t td{padding:13px 16px;text-align:right;white-space:nowrap}
+.dz-t th:first-child,.dz-t td:first-child{text-align:left}
+.dz-t thead th{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);background:var(--surface);border-bottom:1px solid var(--line)}
+.dz-t tbody tr+tr td{border-top:1px solid var(--line)}
+.dz-t tr.dz-pm td{background:var(--accent-soft)}
+.dz-t tr.dz-pm td:first-child{font-weight:600;color:var(--accent-ink)}
+.dz-t tr.dz-dc td{color:var(--ink-2)}
+.dz-t tfoot td{font-weight:600;border-top:2px solid var(--ink)}
+.dz-y{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.dz-y li{background:var(--surface);border-radius:var(--r-md);padding:22px 22px 24px;display:flex;flex-direction:column}
+.dz-y li.on{background:var(--accent-soft)}
+.dz-y .yr{font-size:1.1rem;font-weight:600;letter-spacing:-.02em}
+.dz-y li.on .yr{color:var(--accent-ink)}
+.dz-y .ph{color:var(--ink-2);margin:6px 0 18px;flex:1}
+.dz-y .pc{font-size:.86rem;color:var(--ink-2)}
+.dz-y .vl{font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:500;letter-spacing:-.03em;margin-top:2px;font-variant-numeric:tabular-nums}
+.dz-a{display:block;height:6px;border-radius:980px;background:var(--surface-2);overflow:hidden;margin-top:14px}
+.dz-a i{display:block;height:100%;background:var(--accent);border-radius:980px}
+.dz-c{font-size:.78rem;color:var(--ink-2);margin-top:6px}
+@media (max-width:760px){.dz-meta,.dz-y{grid-template-columns:1fr}}
 .why-g{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .why-g li{background:var(--surface);border-radius:var(--r-lg);padding:26px 26px 28px}
 .why-k{display:inline-block;background:var(--bg);color:var(--accent-ink);font-size:.78rem;font-weight:500;padding:5px 12px;border-radius:980px;margin-bottom:14px}
@@ -524,7 +543,13 @@ footer img{width:80px;height:auto}
 .rm-hd,.rr{display:grid;grid-template-columns:var(--lab) minmax(0,1fr);gap:24px;align-items:center}
 .rm-hd{position:sticky;top:calc(env(safe-area-inset-top,0px) + 56px);background:var(--bg);z-index:2;padding:8px 0;border-bottom:1px solid var(--line)}
 .trk{position:relative;height:30px}
-.trk .yl{position:absolute;top:0;bottom:0;border-left:1px solid var(--line)}
+.trk .yl{position:absolute;top:-9px;bottom:-9px;border-left:1px solid var(--line)}
+.trk .qb{position:absolute;top:-9px;bottom:-9px;background:var(--surface)}
+.rm-hd .qlab{font-size:.72rem;color:var(--ink-2)}
+.qtr{position:relative;height:22px}
+.qtr span{position:absolute;top:0;bottom:0;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:600;color:var(--ink-2);font-variant-numeric:tabular-nums;border-left:1px solid var(--line);white-space:nowrap}
+.qtr span:first-child{border-left:0}
+.qtr span.alt{background:var(--surface)}
 .rm-hd .trk span{position:absolute;top:4px;font-size:.82rem;font-weight:600;padding-left:6px}
 .rm-hd .trk span.q{font-weight:400;color:var(--ink-2);font-size:.72rem;top:6px}
 .rm-grp{margin:30px 0 4px;font-size:.82rem;color:var(--ink-2);font-weight:500}
@@ -550,7 +575,7 @@ footer img{width:80px;height:auto}
 .rr-a li::before{content:"";position:absolute;left:2px;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
 @media (max-width:760px){
   .rm-hd,.rr{grid-template-columns:1fr;gap:6px}
-  .rm-hd>div:first-child{display:none}
+  .rm-hd>div:first-child,.rm-hd .qlab{display:none}
   .rm-hd .trk span.q{display:none}
 }
 
@@ -959,7 +984,7 @@ footer img{width:80px;height:auto}
       <span class="ln">Abertura</span>
     </div>
     <div class="rmap" id="rmap"></div>
-    <p class="fn">Toque em uma fase para ver as atividades. As barras mostram a sequência e a sobreposição entre as fases, sem datas.</p>
+    <p class="fn">Toque em uma fase para ver as atividades. Cada faixa (T1 a T9) é um trimestre do projeto, contado a partir do kickoff; as barras mostram a sequência e a sobreposição entre as fases.</p>
     </div>
     <div class="ppanel" id="pn-or" role="tabpanel" aria-labelledby="tab-or" hidden>
       <p class="pintro">As funções que conduzem a implantação, organizadas em três frentes ligadas à diretoria de projetos, com o apoio da governança, das áreas meio e dos parceiros técnicos.</p>
@@ -1270,15 +1295,35 @@ footer img{width:80px;height:auto}
     </div>
 
     <div class="orc-link">
-      <a class="btn" id="orcLink" href="orcamento-detalhado.html" target="_blank" rel="noopener noreferrer">Orçamento detalhado <svg viewBox="0 0 16 16" aria-hidden="true" width="14" height="14"><path d="M5 11l6-6M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a class="btn ghost" id="cmpLink" href="custo-m2-exposicoes.html" target="_blank" rel="noopener noreferrer">R$/m² das exposições de outros projetos <svg viewBox="0 0 16 16" aria-hidden="true" width="14" height="14"><path d="M5 11l6-6M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn" id="orcLink" href="https://claude.ai/artifact/SaGiB9bpRtjKsdo9m1aoSQ" target="_blank" rel="noopener noreferrer">Orçamento detalhado <svg viewBox="0 0 16 16" aria-hidden="true" width="14" height="14"><path d="M5 11l6-6M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn ghost" id="cmpLink" href="https://claude.ai/artifact/8kkdSFSGehekDjg1uWSGsZ" target="_blank" rel="noopener noreferrer">R$/m² das exposições de outros projetos <svg viewBox="0 0 16 16" aria-hidden="true" width="14" height="14"><path d="M5 11l6-6M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       
     </div>
 
-    <div class="block des">
+
+    <div class="block dz">
       <h3 class="h3">Sugestão de desembolso</h3>
-      <p class="muted">Cinco parcelas ao longo dos 30 meses do projeto, sobre o aporte do patrocinador master, de R$ 84 milhões.</p>
-      <ol class="des-l"><li><span class="des-m">Assinatura</span><b>35%</b><span class="des-v">R$ 29,4 mi</span><span class="des-t">Na assinatura do contrato</span><span class="des-a"><i style="width:35%"></i></span><span class="des-c">35% acumulado</span></li><li><span class="des-m">Mês 6</span><b>35%</b><span class="des-v">R$ 29,4 mi</span><span class="des-t">No início do mês 6</span><span class="des-a"><i style="width:70%"></i></span><span class="des-c">70% acumulado</span></li><li><span class="des-m">Mês 12</span><b>10%</b><span class="des-v">R$ 8,4 mi</span><span class="des-t">No início do mês 12</span><span class="des-a"><i style="width:80%"></i></span><span class="des-c">80% acumulado</span></li><li><span class="des-m">Mês 18</span><b>10%</b><span class="des-v">R$ 8,4 mi</span><span class="des-t">No início do mês 18</span><span class="des-a"><i style="width:90%"></i></span><span class="des-c">90% acumulado</span></li><li><span class="des-m">Mês 24</span><b>10%</b><span class="des-v">R$ 8,4 mi</span><span class="des-t">No início do mês 24</span><span class="des-a"><i style="width:100%"></i></span><span class="des-c">100% acumulado</span></li></ol>
+      <p class="muted">Pela Lei Rouanet, o aporte se distribui em três exercícios fiscais, na proporção de 40%, 40% e 20%. PRONAC 26-2658.</p>
+      <div class="dz-meta">
+        <div><span>Investimento total do projeto</span><b>R$ 140.000.000</b></div>
+        <div class="hl"><span>Cota Patrocínio Master</span><b>60% · R$ 84.000.000</b></div>
+        <div><span>Lei Rouanet · 3 exercícios fiscais</span><b>40% · 40% · 20%</b></div>
+      </div>
+      <div class="dz-tw">
+        <table class="dz-t">
+          <thead><tr><th scope="col">Cota</th><th scope="col">Investimento</th><th scope="col">%</th><th scope="col">2026 (40%)</th><th scope="col">2027 (40%)</th><th scope="col">2028 (20%)</th></tr></thead>
+          <tbody>
+            <tr class="dz-pm"><td>Patrocínio Master</td><td>R$ 84.000.000</td><td>60%</td><td>R$ 33.600.000</td><td>R$ 33.600.000</td><td>R$ 16.800.000</td></tr>
+            <tr class="dz-dc"><td>Demais cotas</td><td>R$ 56.000.000</td><td>40%</td><td>R$ 22.400.000</td><td>R$ 22.400.000</td><td>R$ 11.200.000</td></tr>
+          </tbody>
+          <tfoot><tr><td>Total do projeto</td><td>R$ 140.000.000</td><td>100%</td><td>R$ 56.000.000</td><td>R$ 56.000.000</td><td>R$ 28.000.000</td></tr></tfoot>
+        </table>
+      </div>
+      <ol class="dz-y">
+        <li class="on"><span class="yr">2026</span><span class="ph">Início das obras</span><span class="pc">40% do Patrocínio Master</span><span class="vl">R$ 33.600.000</span><span class="dz-a"><i style="width:40%"></i></span><span class="dz-c">40% acumulado</span></li>
+        <li><span class="yr">2027</span><span class="ph">Execução principal</span><span class="pc">40% do Patrocínio Master</span><span class="vl">R$ 33.600.000</span><span class="dz-a"><i style="width:80%"></i></span><span class="dz-c">80% acumulado</span></li>
+        <li><span class="yr">2028</span><span class="ph">Finalização e inauguração</span><span class="pc">20% do Patrocínio Master</span><span class="vl">R$ 16.800.000</span><span class="dz-a"><i style="width:100%"></i></span><span class="dz-c">100% acumulado</span></li>
+      </ol>
     </div>
 
     <div class="block two">
@@ -1673,8 +1718,17 @@ footer img{width:80px;height:auto}
      ["Mobilização",["Estruturação da equipe","Plano de mobilização dos 3 primeiros meses","Revisão da EAP"]],
      ["Governança",["Comitê de implantação","Alinhamentos com Prefeitura, ESDI e Infraestrutura"]],
      ["Comunicação",["Plano de comunicação pré-abertura","Evento de abertura para convidados e imprensa"]]]};
-  var grid=[25,50,75].map(function(p){return '<i class="yl" style="left:'+p+'%"></i>';}).join("")+'<i class="ol" style="left:'+OPEN+'%"></i>';
-  var hd='<div class="rm-hd"><div class="mono" style="color:var(--ink-2)">Fase</div><div class="trk"><span class="kk">Kickoff</span><span class="op" style="left:'+OPEN+'%">Abertura</span></div></div>';
+  /* trimestres do projeto: T1 = 3 primeiros meses a partir do kickoff */
+  var QB=[];for(var q=0;q<=9;q++){QB.push(q<9?X(new Date(Date.UTC(2026,9+3*q,1)).toISOString().slice(0,10)):100);}
+  var bands="",lines="",cells="";
+  for(q=0;q<9;q++){
+    var a=QB[q],w=QB[q+1]-QB[q];
+    if(q%2)bands+='<i class="qb" style="left:'+a+'%;width:'+w+'%"></i>';
+    if(q)lines+='<i class="yl" style="left:'+a+'%"></i>';
+    cells+='<span class="'+(q%2?'alt':'')+'" style="left:'+a+'%;width:'+w+'%" title="Trimestre '+(q+1)+' do projeto (meses '+(3*q+1)+' a '+(3*q+3)+')">T'+(q+1)+'</span>';
+  }
+  var grid=bands+lines+'<i class="ol" style="left:'+OPEN+'%"></i>';
+  var hd='<div class="rm-hd"><div class="mono" style="color:var(--ink-2)">Fase</div><div class="trk"><span class="kk">Kickoff</span><span class="op" style="left:'+OPEN+'%">Abertura</span></div><div class="mono qlab">Trimestre</div><div class="qtr">'+cells+'</div></div>';
   var k=0;
   function list(g){return g.map(function(x){return '<li><b>'+x[0]+'</b>'+(x[1].length?'<span>'+x[1].join(" · ")+'</span>':'')+'</li>';}).join("");}
   function row(p,i){
